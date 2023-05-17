@@ -1,0 +1,118 @@
+.parent-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background: linear-gradient(to right, rgb(83, 9, 94), rgb(128, 26, 144), rgb(164, 30, 185), rgb(223, 72, 246), rgb(223, 72, 246), rgb(164, 30, 185), rgb(128, 26, 144), rgb(83, 9, 94));
+}
+
+.container {
+    border-radius: 25px;
+    display: grid;
+    width: 60%;
+    height: 80%;
+    padding: 0;
+    margin: 0;
+    grid-template: 1fr/ 1fr;
+    -webkit-box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.4);
+}
+
+.signupBox {
+    background: rgba(255, 255, 255, 0.847);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: auto;
+    border-radius: 15px;
+}
+
+.head {
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: #000;
+    padding-bottom: 0.3em;
+}
+
+.hyperlink {
+    text-decoration: none;
+    color: #3366CC;
+}
+
+
+.reg-form {
+    display: grid;
+    grid-template: 5.5em 5.5em 5.5em 0.6fr 0.6fr/ 1fr;
+}
+
+.half-cut {
+    display: grid;
+    grid-template: 1fr/ 1fr 1fr;
+}
+
+.margin-right {
+    margin-right: 10px;
+}
+
+.block-element {
+    display: block;
+}
+
+.full-width {
+    width: 100%;
+    display: grid;
+    grid-template: 1fr/ 1fr;
+}
+
+.mat-card {
+    width: 70%;
+    max-height: 600px;
+    margin-top: 1.3em;
+    background: rgba(255, 255, 255, 0.009);
+}
+
+.mat-card-title {
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+}
+
+.mat-card-content {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: larger;
+    color: #000000;
+    border-color: rgb(83, 9, 94);
+    margin-top: 1.5em;
+    margin-bottom: -1em;
+}
+
+
+
+.loginButton {
+    /* margin-top: 1.5rem; */
+    width: 100%;
+    background: rgb(83, 9, 94);
+    color: #fff;
+}
+
+.help {
+    text-align: left;
+    color: red;
+    font-size: 0.75rem;
+    font-weight: 100;
+}
+
+.vertical-align {
+    vertical-align: center;
+}
+
+.login {
+    padding-top: 1rem;
+    display: block;
+}

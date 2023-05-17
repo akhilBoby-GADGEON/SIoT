@@ -1,0 +1,83 @@
+<div class='parent-container'>
+    <div class='container'>
+
+        <div class="loginBox" align="center">
+            <mat-card class='mat-elevation-z0'>
+                <mat-card-title>
+                        <h1>Login Here</h1>
+                </mat-card-title>
+                <mat-card-content>
+                    <form #authForm="ngForm">
+                        
+                        <mat-form-field color="primary">
+                            <mat-label>Username</mat-label>
+                            <input
+                                type="text"
+                                matInput
+                                [(ngModel)]="userLoginData.userName"
+                                name="email"
+                                required
+                                #email="ngModel"
+                                >
+    
+                        </mat-form-field>
+                        <mat-error  
+                            class="help"
+                            *ngIf="!email.valid && email.touched"
+                            >
+                                Please enter a valid username
+                        </mat-error >
+    
+                        <mat-form-field>
+                            <mat-label>Password</mat-label>
+                            <input
+                                type="text"
+                                matInput
+                                [type]="hide?'password':'text'"
+                                name="password"
+                                [(ngModel)]="userLoginData.password"
+                                required
+                                #password="ngModel"
+                                >
+                                <button 
+                                    mat-icon-button 
+                                    matSuffix 
+                                    (click)="hide=!hide"
+                                >
+                                    <mat-icon>{{ hide?'visibility_off': 'visibility' }}</mat-icon>
+                                </button>
+                        </mat-form-field>
+                        <mat-error 
+                            class="help"
+                            *ngIf="!password.valid && password.touched"
+                        >
+                            Please enter a valid password
+                        </mat-error>
+    
+                        <mat-card-actions>
+                            <button 
+                            class="loginButton" 
+                            mat-flat-button 
+                            [disabled]="!authForm.valid"
+                            color="primary"
+                            (click)="login()">Login</button>
+    
+                            <a 
+                               routerLink="/forgotPassword" 
+                                class="forgotPass 
+                                       hyperlink"
+                            >
+                                <!-- Forgot password? -->
+                            </a>
+                            <a class="register">New User? <a routerLink="/register" class="hyperlink">Register Here</a></a>
+                        </mat-card-actions>
+    
+                    </form>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
+    
+
+
