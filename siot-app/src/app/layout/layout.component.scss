@@ -1,0 +1,18 @@
+
+.mat-sidenav-container {
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.mat-sidenav {
+    min-width: 200px;
+    padding-top: 8vh;
+    //padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #FFFFFF;
+}
+
+.mat-sidenav-content {
+    overflow-x: hidden;
+}

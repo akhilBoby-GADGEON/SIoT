@@ -27,19 +27,26 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { SharedModuleModule } from './shared-module/shared-module.module';
+import { ProductDetailsComponent } from './supplier/product-details/product-details.component';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProductDetailsComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatDialogModule,
     MatCardModule,
     MatFormFieldModule,
@@ -55,7 +62,6 @@ import { RegisterComponent } from './register/register.component';
     ReactiveFormsModule,
     MatPaginatorModule,
     MatFormFieldModule,
-    FormsModule,
     MatInputModule,
     MatToolbarModule,
     MatMenuModule,
@@ -66,6 +72,7 @@ import { RegisterComponent } from './register/register.component';
     MatNativeDateModule,
     MatTooltipModule,
     MatAutocompleteModule,
+    SharedModuleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
