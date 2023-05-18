@@ -33,6 +33,7 @@ import { RegisterComponent } from './register/register.component';
 import { SharedModuleModule } from './shared-module/shared-module.module';
 import { ProductDetailsComponent } from './supplier/product-details/product-details.component';
 import { LayoutComponent } from './layout/layout.component';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { LayoutComponent } from './layout/layout.component';
     LoginComponent,
     RegisterComponent,
     ProductDetailsComponent,
-    LayoutComponent
+    LayoutComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,

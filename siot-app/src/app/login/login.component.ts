@@ -17,5 +17,6 @@ export class LoginComponent implements OnInit {
 
   login() {
     console.log("In Response");
+    window.location.href = "layout/adminDashboard";
   }
 }

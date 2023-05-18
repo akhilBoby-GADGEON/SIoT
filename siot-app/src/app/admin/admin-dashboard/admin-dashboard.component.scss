@@ -1,0 +1,40 @@
+.container {
+    height: 50%;
+    width: 95%;
+    margin-top: 8em;
+    margin-left: 3em;
+}
+
+.header {
+    display: grid;
+    grid-template: 1fr/ 1.25fr 3.5fr 1fr;
+}
+
+table {
+    margin-top: 4em;
+    width: 100%;
+    grid-column: span 2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 100;
+    align-self: center;
+}
+
+.addbutton {
+    background-color: #513387;
+    width: fit-content;
+    height: 3.25rem;
+    justify-self: right;
+}
+
+.addbutton:hover {
+    background-color: #7758b1;
+}
+
+.empty {
+    font-size: larger;
+    text-align: center;
+    margin: 2%;
+}
