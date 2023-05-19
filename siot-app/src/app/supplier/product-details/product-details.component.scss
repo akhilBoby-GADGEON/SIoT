@@ -15,3 +15,17 @@
     justify-content: space-between;
 }
 
+.details-section {
+    padding-top: 0.75rem;
+    display: grid;
+    grid-template: 1fr 1fr/ 1fr 1fr;
+    row-gap: 1rem;
+}
+
+.details-section > div > button {
+    color: purple;
+    
+    border-width: 0.125rem;
+    border-color: purple;
+    border-style: solid;
+}

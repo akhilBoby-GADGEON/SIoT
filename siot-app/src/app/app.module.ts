@@ -27,6 +27,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import {TextFieldModule} from '@angular/cdk/text-field';
 
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -34,6 +35,8 @@ import { SharedModuleModule } from './shared-module/shared-module.module';
 import { ProductDetailsComponent } from './supplier/product-details/product-details.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { SupplierProfileComponent } from './supplier/supplier-profile/supplier-profile.component';
+import { AddProductComponent } from './supplier/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,9 @@ import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard
     RegisterComponent,
     ProductDetailsComponent,
     LayoutComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    SupplierProfileComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
@@ -74,9 +79,12 @@ import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard
     MatNativeDateModule,
     MatTooltipModule,
     MatAutocompleteModule,
+    TextFieldModule,
     SharedModuleModule
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
