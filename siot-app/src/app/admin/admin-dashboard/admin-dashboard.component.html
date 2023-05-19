@@ -10,25 +10,25 @@
 
 
     <div class="mat-elevation-z8" align="center">
-        <table mat-table [dataSource]="dataSource" matSort>
+        <table mat-table [dataSource]="dataSource" matSort class="customTable">
 
             <ng-container matColumnDef="userId">
-                <th mat-header-cell *matHeaderCellDef> ID </th>
-                <td mat-cell *matCellDef="let element; let j = index">
+                <th mat-header-cell *matHeaderCellDef class="customHeaderId"> ID </th>
+                <td mat-cell *matCellDef="let element; let j = index"  class="customColumnId">
                     <!-- {{ j + 1 + paginator.pageIndex * paginator.pageSize }} -->{{element.userId}}
                 </td>
             </ng-container>
 
             <ng-container matColumnDef="name">
-                <th mat-header-cell mat-sort-header *matHeaderCellDef> Name </th>
-                <td mat-cell *matCellDef="let element">
-                    <a routerLink="layout/details">{{element.name}}</a>       
+                <th mat-header-cell mat-sort-header *matHeaderCellDef class="customHeader"> Name </th>
+                <td mat-cell *matCellDef="let element" class="customColumnName">
+                    <a href="layout/userDetails">{{element.name}}</a>       
                 </td>
             </ng-container>
 
             <ng-container matColumnDef="email">
-                <th mat-header-cell mat-sort-header *matHeaderCellDef> Email </th>
-                <td mat-cell *matCellDef="let element">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef class="customHeader"> Email </th>
+                <td mat-cell *matCellDef="let element"  class="customColumnEmail">
                     <label>
                         {{element.email}}
                     </label>
@@ -37,8 +37,8 @@
 
 
             <ng-container matColumnDef="disable">
-                <th mat-header-cell *matHeaderCellDef> Disable </th>
-                <td mat-cell *matCellDef="let element" style="padding-left: 1.25em;">
+                <th mat-header-cell *matHeaderCellDef class="customHeaderDisable"> Disable </th>
+                <td mat-cell *matCellDef="let element" style="padding-left: 1.25em;"  class="customColumnDisable">
                     <button 
                         mat-icon-button 
                         color="warn" 
@@ -52,8 +52,8 @@
             </ng-container>
 
             <ng-container matColumnDef="phNumber">
-                <th mat-header-cell mat-sort-header *matHeaderCellDef> Phone No </th>
-                <td mat-cell *matCellDef="let element">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef class="customHeader"> Phone No </th>
+                <td mat-cell *matCellDef="let element"  class="customColumnPhNo">
                     <label>
                         {{element.phNumber}}
                     </label>
@@ -65,7 +65,7 @@
 
         </table>
         <!-- <div *ngIf="empty" class="empty">No records found</div> -->
-        <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons>
+        <mat-paginator class="customPaginator" [pageSize]="5" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons>
         </mat-paginator>
     </div>
 </div>

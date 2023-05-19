@@ -1,0 +1,68 @@
+<div class="container">
+
+    <div class="header">
+        <h1>User Details</h1>
+        
+       
+    </div>
+    <div>
+        <h2>Heading</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, consectetur delectus. Fuga eaque quaerat accusantium molestiae expedita recusandae alias cupiditate harum, perspiciatis quae, laboriosam saepe debitis dolores et quas possimus?</p>
+        <h2>Product Details</h2>
+    </div>
+
+
+    <div class="mat-elevation-z8" align="center">
+        
+        <table mat-table [dataSource]="dataSource" matSort class="customTable">
+
+            <ng-container matColumnDef="productId">
+                <th mat-header-cell *matHeaderCellDef class="customHeaderId"> ID </th>
+                <td mat-cell *matCellDef="let element; let j = index" class="customColumnId">
+                    <!-- {{ j + 1 + paginator.pageIndex * paginator.pageSize }} -->{{element.productId}}
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="productName">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef class="customHeader"> Product </th>
+                <td mat-cell *matCellDef="let element" class="customColumnProduct">{{element.productName}}     
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="amount">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef class="customHeader"> Amount </th>
+                <td mat-cell *matCellDef="let element" class="customColumnAmount">
+                    <label>
+                        {{element.amount}}
+                    </label>
+                </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="location">
+                <th mat-header-cell *matHeaderCellDef class="customHeader"> Location </th>
+                <td mat-cell *matCellDef="let element" class="customColumnLocation">
+                    <label>
+                        {{element.location}}
+                    </label>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="status">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef class="customHeaderStatus"> Status </th>
+                <td mat-cell *matCellDef="let element" class="customColumnStatus">
+                    <label>
+                        {{element.status}}
+                    </label>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        </table>
+        <!-- <div *ngIf="empty" class="empty">No records found</div> -->
+        <mat-paginator class="customPaginator" [pageSize]="5" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons>
+        </mat-paginator>
+    </div>
+</div>

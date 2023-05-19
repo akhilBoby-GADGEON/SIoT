@@ -35,6 +35,8 @@ import { SharedModuleModule } from './shared-module/shared-module.module';
 import { ProductDetailsComponent } from './supplier/product-details/product-details.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { CreateUserComponent } from './admin/create-user/create-user.component';
+import { UserDetailsComponent } from './admin/user-details/user-details.component';
 import { SupplierProfileComponent } from './supplier/supplier-profile/supplier-profile.component';
 import { AddProductComponent } from './supplier/add-product/add-product.component';
 
@@ -46,6 +48,8 @@ import { AddProductComponent } from './supplier/add-product/add-product.componen
     ProductDetailsComponent,
     LayoutComponent,
     AdminDashboardComponent,
+    CreateUserComponent,
+    UserDetailsComponent,
     SupplierProfileComponent,
     AddProductComponent
   ],

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ProductDetailsComponent } from './supplier/product-details/product-details.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { UserDetailsComponent } from './admin/user-details/user-details.component';
 import { SupplierProfileComponent } from './supplier/supplier-profile/supplier-profile.component';
 import { AddProductComponent } from './supplier/add-product/add-product.component';
 
@@ -41,7 +42,11 @@ const routes: Routes = [
       },
       {
         path: "adminDashboard",
-        component: AdminDashboardComponent
+        component: AdminDashboardComponent,
+      },
+      {
+        path: "userDetails",
+        component: UserDetailsComponent
       }
     ]
   },

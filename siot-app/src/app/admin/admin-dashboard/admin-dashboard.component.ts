@@ -1,7 +1,9 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Inject, OnInit, ViewChild } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { CreateUserComponent } from '../create-user/create-user.component';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -10,7 +12,7 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class AdminDashboardComponent implements OnInit {
 
-  displayedColumns = ['userId', 'name', 'email', 'disable', 'phNumber'];
+  displayedColumns = ['userId', 'name', 'email', 'phNumber', 'disable'];
   dataSource: MatTableDataSource<any> = new MatTableDataSource(this.loadTokens());
   empty: boolean = true;
   interval: any;
@@ -25,7 +27,8 @@ export class AdminDashboardComponent implements OnInit {
     phNumber: ''
   }
 
-  constructor() {}
+  constructor(
+  public dialog: MatDialog) {}
 
   ngOnInit(): void {
     
@@ -33,7 +36,13 @@ export class AdminDashboardComponent implements OnInit {
   }
 
   createUser() {
-    
+    this.dialog.open(CreateUserComponent, {
+      width: "500px",
+      disableClose: true,
+      data: {
+        message: "Create New User",
+      },
+    });
   }
 
   disableUser(event: any) {
@@ -44,7 +53,7 @@ export class AdminDashboardComponent implements OnInit {
     return [
       {
         "userId": 1,
-        "name": "Justin",
+        "name": "Justin Timberlake",
         "email": "justin@gmail.com",
         "phNumber":"1234456789",
       },

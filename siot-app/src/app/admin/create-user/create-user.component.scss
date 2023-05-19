@@ -1,0 +1,47 @@
+.mat-form-field {
+    display: block;
+}
+
+.mat-dialog-content {
+    padding: 4em;
+    padding-bottom: 1em;
+    padding-top: 2em;
+}
+
+.closeDialog {
+    justify-self: right;
+    background-color: #513387;
+    color: white;
+}
+
+.closeDialog:hover {
+    background-color: #7758b1;
+}
+
+.dialog-title {
+    display: grid;
+    grid-template: 1fr 1fr/ 1fr;
+    padding-left: 2.5em;
+}
+
+h2 {
+    justify-self: left;
+    font-weight: 100;
+    font-size: 2em;
+}
+
+.loginButton {
+    margin-top: 1.5rem;
+    width: 100%;
+    background: #513387;
+    color: #fff;
+}
+
+.half-cut {
+    display: grid;
+    grid-template: 1fr/ 1fr 1fr;
+}
+
+.margin-right {
+    margin-right: 10px;
+}
