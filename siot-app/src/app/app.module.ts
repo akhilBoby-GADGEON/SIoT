@@ -39,6 +39,7 @@ import { CreateUserComponent } from './admin/create-user/create-user.component';
 import { UserDetailsComponent } from './admin/user-details/user-details.component';
 import { SupplierProfileComponent } from './supplier/supplier-profile/supplier-profile.component';
 import { AddProductComponent } from './supplier/add-product/add-product.component';
+import { ViewProductsComponent } from './supplier/view-products/view-products.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { AddProductComponent } from './supplier/add-product/add-product.componen
     CreateUserComponent,
     UserDetailsComponent,
     SupplierProfileComponent,
-    AddProductComponent
+    AddProductComponent,
+    ViewProductsComponent
   ],
   imports: [
     BrowserModule,

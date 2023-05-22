@@ -1,0 +1,18 @@
+<div class="parent-container">
+  <h1>Product List</h1>
+  <div class="container">
+    <mat-card *ngFor="let product of products" class="product-card">
+      <mat-card-header>
+        <mat-card-title>{{ product.name }}</mat-card-title>
+      </mat-card-header>
+      <img class="image" mat-card-image [src]="product.imageUrl" alt="Product Image">
+      <mat-card-content>
+        <p>{{ product.description }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button class="info-button">more info<mat-icon class="icon">chevron_right</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
