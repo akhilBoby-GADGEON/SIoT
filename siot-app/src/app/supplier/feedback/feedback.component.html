@@ -1,0 +1,20 @@
+<div class="main-container">
+    <div class="feedback-container">
+        <h1>Feedbacks</h1>
+        <div class="review" *ngFor="let feedback of feedbacks">
+            <h4>{{ feedback.consumerName }}</h4>
+            <div class="star-rating">
+                <span 
+                    class="star" 
+                    [ngClass]="{'filled': i < feedback.rating}" 
+                    *ngFor="let star of [1, 2, 3, 4, 5]; 
+                    let i = index"
+                >
+                    &#9733;
+                </span>
+            </div>
+            <p>{{ feedback.message }}</p>
+        </div>
+    </div>
+    
+</div>

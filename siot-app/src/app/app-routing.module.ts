@@ -10,6 +10,7 @@ import { UserDetailsComponent } from './admin/user-details/user-details.componen
 import { SupplierProfileComponent } from './supplier/supplier-profile/supplier-profile.component';
 import { AddProductComponent } from './supplier/add-product/add-product.component';
 import { ViewProductsComponent } from './supplier/view-products/view-products.component';
+import { FeedbackComponent } from './supplier/feedback/feedback.component';
 
 const routes: Routes = [
   {
@@ -40,6 +41,10 @@ const routes: Routes = [
       {
         path: "supplier-profile",
         component: SupplierProfileComponent
+      },
+      {
+        path: "feedback",
+        component: FeedbackComponent
       },
       {
         path: "adminDashboard",
