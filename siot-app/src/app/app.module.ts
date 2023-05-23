@@ -41,6 +41,7 @@ import { SupplierProfileComponent } from './supplier/supplier-profile/supplier-p
 import { AddProductComponent } from './supplier/add-product/add-product.component';
 import { ViewProductsComponent } from './supplier/view-products/view-products.component';
 import { FeedbackComponent } from './supplier/feedback/feedback.component';
+import { SupplierSupportComponent } from './supplier/supplier-support/supplier-support.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { FeedbackComponent } from './supplier/feedback/feedback.component';
     SupplierProfileComponent,
     AddProductComponent,
     ViewProductsComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    SupplierSupportComponent
   ],
   imports: [
     BrowserModule,
