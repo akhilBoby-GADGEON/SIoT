@@ -42,6 +42,8 @@ import { AddProductComponent } from './supplier/add-product/add-product.componen
 import { ViewProductsComponent } from './supplier/view-products/view-products.component';
 import { FeedbackComponent } from './supplier/feedback/feedback.component';
 import { SupplierSupportComponent } from './supplier/supplier-support/supplier-support.component';
+import { SupplierHistoryComponent } from './supplier/supplier-history/supplier-history.component';
+import { ConsumerSupportComponent } from './consumer/consumer-support/consumer-support.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,9 @@ import { SupplierSupportComponent } from './supplier/supplier-support/supplier-s
     AddProductComponent,
     ViewProductsComponent,
     FeedbackComponent,
-    SupplierSupportComponent
+    SupplierSupportComponent,
+    SupplierHistoryComponent,
+    ConsumerSupportComponent
   ],
   imports: [
     BrowserModule,
