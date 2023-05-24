@@ -1,1 +1,19 @@
-<p>consumer-support works!</p>
+<div class="parent-container">
+    <h1>Support</h1>
+    <div class="mat-elevation-z2">
+       
+        <form (ngSubmit)="sendMessage()">
+            <h3>Title:</h3>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Type message title here">
+              </mat-form-field>
+              <h3>Message:</h3>
+            <div>
+                <mat-form-field appearance="outline">
+                    <textarea matInput name="message" placeholder="Type your concern here" [(ngModel)]="message" required></textarea>
+                </mat-form-field>            
+            </div>
+            <button mat-raised-button type="submit">Send</button>
+          </form>
+    </div>
+</div>

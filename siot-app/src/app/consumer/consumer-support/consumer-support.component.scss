@@ -1,0 +1,42 @@
+.parent-container {
+    padding-top: 8em;
+    padding-left: 1.5em;
+    height: flex;
+    width: 97%;
+}
+
+.mat-elevation-z2 {
+    display: grid;
+    grid-template: 1fr/1fr;
+    grid-row-gap: 20px;
+    background-color: white;
+    height: flex;
+    width: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #513387;
+    padding-bottom: 0.5em;
+}
+
+button{
+    margin-left: 20px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    background-color: #513387;
+    color: white;
+    // width:97%;
+}
+
+mat-form-field{
+    margin: 13px;
+    width: 97%;
+    color: black;
+}
+
+h3{
+    margin: 10px;
+}

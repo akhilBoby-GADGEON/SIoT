@@ -14,6 +14,7 @@ import { FeedbackComponent } from './supplier/feedback/feedback.component';
 import { SupplierSupportComponent } from './supplier/supplier-support/supplier-support.component';
 import { AddDispatcherComponent } from './supplier/add-dispatcher/add-dispatcher.component';
 import { SupplierHistoryComponent } from './supplier/supplier-history/supplier-history.component';
+import { ConsumerSupportComponent } from './consumer/consumer-support/consumer-support.component';
 
 const routes: Routes = [
   {
@@ -73,6 +74,10 @@ const routes: Routes = [
         path: "history",
         component: SupplierHistoryComponent
       },
+      {
+        path: "consumer-support",
+        component: ConsumerSupportComponent
+      }
     ]
   },
   {
