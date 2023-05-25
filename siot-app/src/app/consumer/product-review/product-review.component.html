@@ -1,0 +1,65 @@
+<div class="main-container">
+    <div class="product-review-container">
+        <h1>Product Review</h1>
+
+        <div class="product-review-content">
+
+            <div class="product-review-content-main">
+
+                <div class="rating">
+                    <h3>Overall rating</h3>
+                    <ul>
+                      <li 
+                          *ngFor="let star of stars" 
+                          (click)="setRating(star)" 
+                          [class.active]="star <= rating"
+                      >
+                          &#9733;
+                      </li>
+                    </ul>
+    
+                    <hr>
+
+                    <h3>Review</h3>
+    
+                    <mat-form-field>
+                        <mat-label>Add a headline</mat-label>
+                        <input
+                            matInput  
+                            [(ngModel)]="title">
+                    </mat-form-field>
+    
+                    <mat-form-field>
+                        <mat-label>Add a written review</mat-label>
+                        <textarea
+                            matInput
+                            rows="5" 
+                            [(ngModel)]="review"></textarea>
+                    </mat-form-field>
+                </div>
+                
+                
+                <div>
+                    <h3>Add images</h3>
+                    <input type="file" (change)="handleImageUpload($event)" multiple>
+                    <div *ngIf="selectedImages.length > 0">
+                        <p>Selected Images:</p>
+                        <img 
+                            *ngFor="let image of selectedImages" 
+                            [src]="image" 
+                            alt="Selected Image"
+                            width="100px"
+                            height="100px"
+                            style="background-position: center;"
+    
+                        >
+                    </div>
+                </div>
+
+            </div>
+
+            <button (click)="submitReview()">Submit</button>
+        </div>
+
+      </div>
+</div>

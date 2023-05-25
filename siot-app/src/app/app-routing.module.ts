@@ -16,6 +16,7 @@ import { AddDispatcherComponent } from './supplier/add-dispatcher/add-dispatcher
 import { SupplierHistoryComponent } from './supplier/supplier-history/supplier-history.component';
 import { ConsumerSupportComponent } from './consumer/consumer-support/consumer-support.component';
 import { ConsumerFeedbackComponent } from './consumer/consumer-feedback/consumer-feedback.component';
+import { ProductReviewComponent } from './consumer/product-review/product-review.component';
 
 const routes: Routes = [
   {
@@ -54,6 +55,10 @@ const routes: Routes = [
       {
         path: "feedback",
         component: FeedbackComponent
+      },
+      {
+        path: "product-review",
+        component: ProductReviewComponent
       },
       {
         path: "adminDashboard",
