@@ -41,7 +41,22 @@
                 
                 <div>
                     <h3>Add images</h3>
-                    <input type="file" (change)="handleImageUpload($event)" multiple>
+                    <div class="upload-image">
+                        <button 
+                            mat-flat-button
+                            class="outline-button"
+                            (click)="hiddenfileinput.click()"
+                        >
+                            Upload Product Image
+                        </button>
+                        <input 
+                            type="file" 
+                            style="display: none" 
+                            (change)="handleImageUpload($event)" 
+                            multiple
+                            #hiddenfileinput
+                        >
+                    </div>
                     <div *ngIf="selectedImages.length > 0">
                         <p>Selected Images:</p>
                         <img 
@@ -58,7 +73,13 @@
 
             </div>
 
-            <button (click)="submitReview()">Submit</button>
+            <button
+                mat-flat-button 
+                class="outline-button" 
+                (click)="submitReview()"
+            >
+                Submit
+            </button>
         </div>
 
       </div>

@@ -37,18 +37,6 @@
     color: gold;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
 hr {
     margin: 1.25em 0;
     width: 90%;
@@ -71,5 +59,19 @@ h3 {
     margin-right: 1em;
     width: 90%;
 
+}
+
+.outline-button {
+    color: purple;
+
+    border-width: 0.125rem;
+    border-color: purple;
+    border-style: solid;
+}
+
+.upload-image > button {
+    width: 95%;
+    padding: 0.4em;
+    margin-bottom: 1em;
 }
   
