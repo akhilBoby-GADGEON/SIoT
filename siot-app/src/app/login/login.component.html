@@ -8,67 +8,33 @@
             </mat-card-title>
             <mat-card-content>
                 <form #authForm="ngForm">
-                    
-                    <mat-form-field color="primary">
-                        <input
-                            type="text"
-                            matInput
-                            placeholder="Username"
-                            onfocus="this.placeholder='Ex:'"
-                            ngModel
-                            name="email"
-                            required
-                            #email="ngModel"
-                            >
 
+                    <mat-form-field color="primary">
+                        <mat-label>Email</mat-label>
+                        <input type="text" matInput ngModel name="email" required email #email="ngModel">
                     </mat-form-field>
-                    <p 
-                        class="help"
-                        *ngIf="!email.valid && email.touched"
-                        >
-                            Please enter a valid username
-                    </p>
+                    <mat-error class="help" *ngIf="!email.valid && email.touched">
+                        Please enter a valid email
+                    </mat-error>
 
                     <mat-form-field>
-                        <input
-                            type="text"
-                            matInput
-                            [type]="hide?'password':'text'"
-                            placeholder="Password"
-                            name="password"
-                            ngModel
-                            required
-                            #password="ngModel"
-                            >
-                            <button 
-                                mat-icon-button 
-                                matSuffix 
-                                (click)="hide=!hide"
-                            >
-                                <mat-icon>{{ hide?'visibility_off': 'visibility' }}</mat-icon>
-                            </button>
+                        <input type="text" matInput [type]="hide?'password':'text'" placeholder="Password"
+                            name="password" ngModel required #password="ngModel">
+                        <button mat-icon-button matSuffix (click)="hide=!hide">
+                            <mat-icon>{{ hide?'visibility_off': 'visibility' }}</mat-icon>
+                        </button>
                     </mat-form-field>
-                    <p 
-                        class="help"
-                        *ngIf="!password.valid && password.touched"
-                    >
+                    <p class="help" *ngIf="!password.valid && password.touched">
                         Please enter a valid password
                     </p>
 
-                    <button 
-                        class="loginButton" 
-                        mat-flat-button 
-                        [disabled]="!authForm.valid"
-                        color="primary"
+                    <button class="loginButton" mat-flat-button [disabled]="!authForm.valid" color="primary"
                         (click)="login()">Login</button>
-                        <a 
-                        routerLink="/forgotPassword" 
-                         class="forgotPass 
-                                hyperlink"
-                     >
-                         Forgot password?
-                     </a>
-                     <a class="register">New User? <a routerLink="/register" class="hyperlink">Register Here</a></a>
+                    <a routerLink="/forgot-password" class="forgotPass 
+                                hyperlink">
+                        Forgot password?
+                    </a>
+                    <a class="register">New User? <a routerLink="/register" class="hyperlink">Register Here</a></a>
                 </form>
             </mat-card-content>
         </mat-card>

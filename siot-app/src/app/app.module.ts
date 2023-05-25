@@ -47,6 +47,8 @@ import { SupplierHistoryComponent } from './supplier/supplier-history/supplier-h
 import { ConsumerSupportComponent } from './consumer/consumer-support/consumer-support.component';
 import { ConsumerFeedbackComponent } from './consumer/consumer-feedback/consumer-feedback.component';
 import { ProductReviewComponent } from './consumer/product-review/product-review.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +69,9 @@ import { ProductReviewComponent } from './consumer/product-review/product-review
     SupplierHistoryComponent,
     ConsumerSupportComponent,
     ConsumerFeedbackComponent,
-    ProductReviewComponent
+    ProductReviewComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,

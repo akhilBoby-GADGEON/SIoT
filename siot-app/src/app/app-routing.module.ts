@@ -17,6 +17,8 @@ import { SupplierHistoryComponent } from './supplier/supplier-history/supplier-h
 import { ConsumerSupportComponent } from './consumer/consumer-support/consumer-support.component';
 import { ConsumerFeedbackComponent } from './consumer/consumer-feedback/consumer-feedback.component';
 import { ProductReviewComponent } from './consumer/product-review/product-review.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 const routes: Routes = [
   {
@@ -89,6 +91,14 @@ const routes: Routes = [
         component: ConsumerFeedbackComponent
       }
     ]
+  },
+  {
+    path: "forgot-password",
+    component: ForgotPasswordComponent
+  },
+  {
+    path: "reset-password",
+    component: ResetPasswordComponent
   },
   {
     path: "**",
