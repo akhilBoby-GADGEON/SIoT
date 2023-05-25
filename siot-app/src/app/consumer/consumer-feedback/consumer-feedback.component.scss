@@ -1,0 +1,59 @@
+.parent-container {
+    padding-top: 8em;
+    padding-left: 1.5em;
+    height: flex;
+    width: 97%;
+}
+
+.mat-elevation-z2 {
+    display: grid;
+    grid-template: 1fr/1fr;
+    width: 50%;
+}
+
+h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #513387;
+    padding-bottom: 0.5em;
+}
+
+p {
+    margin: 6px;
+    color: black;
+    font-size: medium;
+}
+
+.ratings {
+    margin: 20px;
+}
+
+.comments {
+    margin: 20px;
+}
+
+button {
+    background-color: #513387;
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+mat-icon {
+    color: gray;
+    font-size: 27px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+mat-icon:hover {
+    color: gold;
+}
+
+// mat-icon:hover~mat-icon {
+//     color: gold;
+// }
+
+mat-icon.selected {
+    color: gold;
+}

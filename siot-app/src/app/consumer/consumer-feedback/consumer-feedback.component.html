@@ -1,0 +1,24 @@
+<div class="parent-container">
+    <h1>Feedback</h1>
+    <div class="mat-elevation-z2">
+        <div class="ratings">
+            <p>How would you rate our service?</p>
+            <mat-icon *ngFor="let rating of ratings" [class.selected]="rating <= selectedRating"
+                (click)="selectRating(rating)">
+                star
+            </mat-icon>
+        </div>
+
+        <div class="comments">
+            <p>Write a review (Optional):</p>
+            <mat-form-field appearance="outline">
+                <mat-label>Comment</mat-label>
+                <textarea matInput [(ngModel)]="comment" rows="5"></textarea>
+            </mat-form-field>
+        </div>
+
+        <div class="submit-button">
+            <button mat-raised-button (click)="submitFeedback()">Submit</button>
+        </div>
+    </div>
+</div>

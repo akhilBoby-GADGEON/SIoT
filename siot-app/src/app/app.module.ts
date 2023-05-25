@@ -45,6 +45,7 @@ import { SupplierSupportComponent } from './supplier/supplier-support/supplier-s
 import { AddDispatcherComponent } from './supplier/add-dispatcher/add-dispatcher.component';
 import { SupplierHistoryComponent } from './supplier/supplier-history/supplier-history.component';
 import { ConsumerSupportComponent } from './consumer/consumer-support/consumer-support.component';
+import { ConsumerFeedbackComponent } from './consumer/consumer-feedback/consumer-feedback.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { ConsumerSupportComponent } from './consumer/consumer-support/consumer-s
     SupplierSupportComponent,
     AddDispatcherComponent,
     SupplierHistoryComponent,
-    ConsumerSupportComponent
+    ConsumerSupportComponent,
+    ConsumerFeedbackComponent
   ],
   imports: [
     BrowserModule,
